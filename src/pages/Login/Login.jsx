@@ -12,6 +12,7 @@ const Login = () => {
       <form className="login-from">
         <h2>{currentState}</h2>
 
+        {/* logic for signup / login */}
         {currentState === "Sign Up" ? (
           <input
             type="text"
@@ -35,7 +36,9 @@ const Login = () => {
           className="from-input"
         />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">
+          {currentState === "Sign Up" ? "Create an account" : "Login now"}
+        </button>
 
         <div className="login-term">
           <input type="checkbox" name="" id="" />
@@ -43,16 +46,30 @@ const Login = () => {
         </div>
 
         <div className="login-forgot">
-          <p className="login-toggle">
-            Already have an account{" "}
-            <span
-              onClick={() => {
-                setCurrentState("Login");
-              }}
-            >
-              click here
-            </span>
-          </p>
+          {/* logic for "have and account" & "create an account" */}
+          {currentState === "Sign Up" ? (
+            <p className="login-toggle">
+              Already have an account{" "}
+              <span
+                onClick={() => {
+                  setCurrentState("Login");
+                }}
+              >
+                click here
+              </span>
+            </p>
+          ) : (
+            <p className="login-toggle">
+              Create an account{" "}
+              <span
+                onClick={() => {
+                  setCurrentState("Sign Up");
+                }}
+              >
+                click here
+              </span>
+            </p>
+          )}
         </div>
       </form>
     </div>
