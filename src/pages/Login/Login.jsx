@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import assets from "../../assets/assets";
 
 const Login = () => {
+  const [currentState, setCurrentState] = useState("Sign Up");
+
   return (
     <div className="login">
       <img src={assets.logo_big} alt="logo" className="logo" />
 
       <form className="login-from">
-        <h2>Sign Up</h2>
+        <h2>{currentState}</h2>
         <input
           type="text"
           placeholder="User Name"
@@ -39,7 +41,14 @@ const Login = () => {
 
         <div className="login-forgot">
           <p className="login-toggle">
-            Already have an account <span>click here</span>
+            Already have an account{" "}
+            <span
+              onClick={() => {
+                setCurrentState("Login");
+              }}
+            >
+              click here
+            </span>
           </p>
         </div>
       </form>
