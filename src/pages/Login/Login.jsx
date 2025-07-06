@@ -11,12 +11,15 @@ const Login = () => {
 
       <form className="login-from">
         <h2>{currentState}</h2>
-        <input
-          type="text"
-          placeholder="User Name"
-          required
-          className="from-input"
-        />
+
+        {currentState === "Sign Up" ? (
+          <input
+            type="text"
+            placeholder="User Name"
+            required
+            className="from-input"
+          />
+        ) : null}
 
         <input
           type="email"
