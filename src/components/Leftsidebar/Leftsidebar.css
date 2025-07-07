@@ -55,3 +55,35 @@
   height: 70%;
   overflow-y: scroll;
 }
+
+.friends img {
+  width: 35px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.friends {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+
+.friends div {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends span {
+  color: #e2e1e1;
+  font-size: 11px;
+}
+
+.friends:hover {
+  background: #1f161669;
+}
+
+.friends:hover span {
+  color: wheat;
+}
