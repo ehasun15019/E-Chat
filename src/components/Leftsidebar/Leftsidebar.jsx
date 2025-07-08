@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Leftsidebar.css";
 import assets from "../../assets/assets";
 
 const Leftsidebar = () => {
+  const [showSubMenu, SetShowSubMenu] = useState(false);
+
   return (
     <div className="ls">
       <div className="ls-top">
@@ -10,7 +12,20 @@ const Leftsidebar = () => {
           <img src={assets.logo} className="logo" alt="logo" />
 
           <div className="menu">
-            <img src={assets.menu_icon} alt="menu-icon" />
+            <img
+              src={assets.menu_icon}
+              alt="menu-icon"
+              onClick={() => SetShowSubMenu((a) => !a)}
+            />
+
+            <div
+              className="sub-menu"
+              style={{ display: showSubMenu ? "block" : "none" }}
+            >
+              <p>Edit Profile</p>
+              <hr />
+              <p>Logout</p>
+            </div>
           </div>
         </div>
 
