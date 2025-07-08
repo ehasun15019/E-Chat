@@ -115,3 +115,9 @@
   font-size: 9px;
   color: #c6c6c6;
 }
+
+.msg-img {
+  max-width: 230px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
