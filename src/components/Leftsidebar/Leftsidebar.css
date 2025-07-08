@@ -100,8 +100,8 @@
   width: 130px;
   padding: 20px;
   border-radius: 5px;
-  background: white;
-  color: black;
+  background: #0d1a2b;
+  color: #e2e1e1;
 }
 
 .sub-menu hr {
@@ -115,7 +115,3 @@
   cursor: pointer;
   font-size: 14px;
 }
-
-/* .menu:hover .sub-menu {
-  display: block;
-} */
